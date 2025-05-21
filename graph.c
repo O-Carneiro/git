@@ -1,5 +1,3 @@
-#define DISABLE_SIGN_COMPARE_WARNINGS
-
 #include "git-compat-util.h"
 #include "gettext.h"
 #include "config.h"
@@ -115,7 +113,7 @@ static const char *column_get_color_code(unsigned short color)
 
 struct graph_line {
 	struct strbuf *buf;
-	size_t width;
+	int width;
 };
 
 static inline void graph_line_addch(struct graph_line *line, int c)
